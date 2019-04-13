@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	const int addition = 1; //Integers for choices 1-5
+	const int subtraction = 2;
+	const int multiplication = 3;
+	const int division = 4;
+	const int modulus = 5;
+	int choice = 0;
+	int x = 0;//First and Second Number
+	int y = 0;
+	cout << "1) addition 2) subtraction 3) multiplication 4) division: \n";//Prompt for chosen operator
+	cin >> choice;
+	if (choice <1 or choice > 5) {
+		cout << "BAD INPUT!" << endl; //Give an error message
+		exit(1); //Quit
+	} else if (choice == 1) {//Addition
+		cout << "Please enter two numbers: \n";
+		cin >> x;
+		if (x == 776) {
+			cout << "BAD INPUT!\n";
+			exit(0);
+		}
+		cin >> y;
+		cout << x + y << endl;
+		exit(2);
+	} else if (choice == 2) {//Subtraction
+		cout << "Please enter two numbers: \n";
+		cin >> x;
+		cin >> y;
+		cout << x - y << endl;
+		exit(3);
+	} else if (choice == 3) {//Multiplication
+		cout << "Please enter two numbers: \n";
+		cin >> x;
+		cin >> y;
+		cout << x * y << endl;
+		exit(3);
+	} else if (choice == 4) {//Division
+		cout << "Please enter two numbers: \n";
+		cin >> x;
+		cin >> y;
+		if (y == 0)  {
+			cout << "BAD INPUT!" << endl;
+			exit(0);
+		}
+		cout << x / y << endl;
+		exit(4);
+	} else if (choice == 5) {//Modulus
+		cout << "Please enter two numbers: \n";
+		cin >> x;
+		cin >> y;
+		if (y == 0)  {
+			cout << "BAD INPUT!" << endl;
+			exit(0);
+		}
+		cout << x % y << endl;
+		exit(5);
+
+	}
+}
